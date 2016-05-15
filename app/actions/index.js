@@ -4,6 +4,7 @@ import axios from 'axios';
 
 export const FETCH_BIKE_SYSTEMS = 'FETCH_BIKE_SYSTEMS';
 export const FETCH_BIKE_SYSTEM = 'FETCH_BIKE_SYSTEM';
+export const FETCH_STATIONS = 'FETCH_STATIONS';
 export const SYSTEM_SELECTED = 'SELECT_SYSTEM';
 
 //const ROOT_URL = 'http://45.55.157.6:8080'; // digital ocean
@@ -22,6 +23,14 @@ export function fetchBikeSystem(id) {
   const request = axios.get(`${ROOT_URL}/api/v1/bikesystem/${id}`);
   return {
     type: FETCH_BIKE_SYSTEM,
+    payload: request
+  };
+}
+
+export function fetchStations(id) {
+  const request = axios.get(`${ROOT_URL}/api/v1/stations/${id}`);
+  return {
+    type: FETCH_STATIONS,
     payload: request
   };
 }

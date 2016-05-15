@@ -33,7 +33,20 @@ class AllSystems extends Component {
         const { selectSystem } = this.props;
         if (!systems) {
             return (
-                <div>loading</div>
+                <div className="container-fluid">
+                    <div className='row'>
+                        <div className="col-md-4 text-center">
+                            <h5>Bike systems...</h5>
+                            <img src="/images/loading/ajax-loader.gif" />
+                        </div>
+                        <div className="col-md-8 text-center">
+                            <h5>Map...</h5>
+                            <img src="/images/loading/ajax-loader.gif" />
+                        </div>
+                    </div>
+                </div>
+                         
+                
             )
         } else {
             return (

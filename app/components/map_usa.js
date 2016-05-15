@@ -35,7 +35,7 @@ function renderSystemMarkers(systems, selected, selectSystem) {
             position={[Number(coords[0]),Number(coords[1])]}>
             <Popup>
                 <span>
-                    <h5><a href='/system/citybikenyc'>{system.name}</a></h5>
+                    <h5><a href={'/system/' + system.id}>{system.name}</a></h5>
                     {system.location}
                 </span>
             </Popup>
